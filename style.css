@@ -13,5 +13,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000010;
+    background-color: rgb(0, 0, 16);
+}
+
+#my-canvas{
+    background-color: white;
+    /* width: 1080px;
+    height: 720px; */
 }
