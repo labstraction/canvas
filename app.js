@@ -141,18 +141,18 @@ function update() {
 
         const diceX = Math.random();
         if (diceX > 0.8) {
-            rect.vX += Math.random() * 3
+            rect.vX += Math.random()
         }
         if (diceX < 0.2) {
-            rect.vX -= Math.random() * 3
+            rect.vX -= Math.random()
         }
 
         const diceY = Math.random();
         if (diceY > 0.8) {
-            rect.vY += Math.random() * 3
+            rect.vY += Math.random()
         }
         if (diceY < 0.2) {
-            rect.vY -= Math.random() * 3
+            rect.vY -= Math.random()
         }
 
         if (rect.vX > 3) {
