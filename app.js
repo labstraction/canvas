@@ -97,8 +97,8 @@ function setup(){
         const blue = Math.round(Math.random() * 255);
         const alpha = Math.random();
 
-        const width = 3;
-        const height = 3;
+        const width = 20;
+        const height = 20;
         
         const randomX = Math.random() * (800 - width);
         const randomY = Math.random() * (800 - height);
@@ -182,8 +182,27 @@ function draw() {
 
     for (const rect of rectangles) {
 
+        // ctx.fillStyle = rect.color;
+        // ctx.fillRect(rect.x, rect.y, rect.width, rect.height)
+
+        // const img = new Image();
+
+        // img.addEventListener('load', () => {
+        //     ctx.drawImage(img, rect.x, rect.y, rect.width, rect.height)
+        // })
+
+        // img.src = './assets/heart.png'
+        
         ctx.fillStyle = rect.color;
-        ctx.fillRect(rect.x, rect.y, rect.width, rect.height)
+
+        ctx.beginPath()
+        ctx.moveTo(rect.x + 10, rect.y + 20);
+        ctx.lineTo(rect.x, rect.y + 10);
+        ctx.arc(rect.x + 5, rect.y + 10, 5, Math.PI, 0);
+        ctx.arc(rect.x + 15, rect.y + 10, 5, Math.PI, 0);
+        ctx.lineTo(rect.x + 10, rect.y + 20);
+        ctx.closePath()
+        ctx.fill()
     }
 
 }
